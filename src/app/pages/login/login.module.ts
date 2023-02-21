@@ -1,21 +1,15 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import {LoginComponent} from "./login.component";
+import {MaterialModule} from "../../shared/material.module";
 import {ReactiveFormsModule} from "@angular/forms";
-import {MatFormFieldModule} from "@angular/material/form-field";
-import {MatInputModule} from "@angular/material/input";
-import {MatButtonModule} from "@angular/material/button";
 
 
 
 @NgModule({
   declarations: [LoginComponent],
   imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule
+    MaterialModule,
+    ReactiveFormsModule
   ],
   exports: [LoginComponent]
 })
