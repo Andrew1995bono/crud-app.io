@@ -6,11 +6,12 @@ import {AddModule} from "./pages/add/add.module";
 import {LoginModule} from "./pages/login/login.module";
 import {HeaderFooterModule} from "./shared/header-footer.module";
 import {CommonModule} from "@angular/common";
+import {ItemsModule} from "./pages/items/items.module";
 
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     CommonModule,
@@ -18,7 +19,8 @@ import {CommonModule} from "@angular/common";
     AppRoutingModule,
     AddModule,
     LoginModule,
-    HeaderFooterModule
+    HeaderFooterModule,
+    ItemsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
