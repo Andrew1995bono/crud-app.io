@@ -4,18 +4,18 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {CommonModule} from "@angular/common";
 
 
 @NgModule({
   declarations: [],
   imports: [
+    CommonModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    BrowserAnimationsModule
   ],
   exports: [
     MatToolbarModule,
@@ -23,7 +23,6 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    BrowserAnimationsModule,
   ]
 })
 export class MaterialModule { }

@@ -1,0 +1,9 @@
+@import "/src/app/mixins/mixin";
+
+:host {
+  @include hostStyles;
+}
+
+div.add-form {
+  @include formFieldsStyles;
+}
