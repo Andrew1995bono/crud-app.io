@@ -1,0 +1,15 @@
+@mixin hostStyles {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin formFieldsStyles {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #6ECCAF;
+  width: 300px;
+  border-radius: 8px;
+}
