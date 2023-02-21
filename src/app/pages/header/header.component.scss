@@ -1,0 +1,16 @@
+.flex-spacing {
+  flex: 1 1 auto;
+}
+
+span {
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:nth-child(2) {
+  margin-left: 20px;
+}
