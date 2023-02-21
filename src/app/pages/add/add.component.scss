@@ -1,0 +1,14 @@
+:host {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.add-form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #65DFAF;
+  width: 300px;
+  border-radius: 8px;
+}
