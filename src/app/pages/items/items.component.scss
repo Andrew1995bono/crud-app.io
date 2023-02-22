@@ -1,0 +1,16 @@
+:host {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.item-card {
+  height: 300px;
+}
+
+::ng-deep .mat-card-header .mat-card-header-text {
+  flex-direction: row;
+  width: 100%;
+  text-align: center;
+}

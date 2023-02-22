@@ -1,26 +1,30 @@
 <form [formGroup]="addForm"
-      (ngSubmit)="onSubmit()">
+      (ngSubmit)="addItem()">
 
   <div class="add-form">
     <mat-form-field appearance="outline">
       <mat-label>Item Name</mat-label>
       <input matInput
              formControlName="itemName">
-      <mat-error *ngIf="addForm.invalid">{{checkIfFieldIsValid('itemName','item name')}}</mat-error>
+      <mat-error *ngIf="addForm.invalid">{{checkIfFieldIsValid('itemName', 'item name')}}</mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label>Item Category</mat-label>
       <input matInput
              formControlName="itemCategory">
-      <mat-error *ngIf="addForm.invalid">{{checkIfFieldIsValid('itemCategory','item category')}}</mat-error>
+      <mat-error *ngIf="addForm.invalid">{{checkIfFieldIsValid('itemCategory', 'item category')}}</mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label>Item Description</mat-label>
       <input matInput
              formControlName="itemDescription">
-      <mat-error *ngIf="addForm.invalid">{{checkIfFieldIsValid('itemDescription','item description')}}</mat-error>
+      <mat-error *ngIf="addForm.invalid">{{checkIfFieldIsValid('itemDescription', 'item description')}}</mat-error>
     </mat-form-field>
-    <button type="submit" mat-raised-button color="primary">Add</button>
+    <button type="submit"
+            mat-raised-button
+            color="primary"
+            [disabled]="!addForm.valid">Add
+    </button>
   </div>
 
 </form>

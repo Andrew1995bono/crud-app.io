@@ -1,26 +1,29 @@
 <form [formGroup]="editForm"
-      (ngSubmit)="onSubmit()">
+      (ngSubmit)="editCurrentItem()">
 
   <div class="add-form">
     <mat-form-field appearance="outline">
       <mat-label>Item Name</mat-label>
       <input matInput
              formControlName="itemName">
-      <mat-error *ngIf="editForm.invalid">{{checkIfFieldIsValid('itemName','item name')}}</mat-error>
+      <mat-error *ngIf="editForm.invalid">{{checkIfFieldIsValid('itemName', 'item name')}}</mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label>Item Category</mat-label>
       <input matInput
              formControlName="itemCategory">
-      <mat-error *ngIf="editForm.invalid">{{checkIfFieldIsValid('itemCategory','item category')}}</mat-error>
+      <mat-error *ngIf="editForm.invalid">{{checkIfFieldIsValid('itemCategory', 'item category')}}</mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label>Item Description</mat-label>
       <input matInput
              formControlName="itemDescription">
-      <mat-error *ngIf="editForm.invalid">{{checkIfFieldIsValid('itemDescription','item description')}}</mat-error>
+      <mat-error *ngIf="editForm.invalid">{{checkIfFieldIsValid('itemDescription', 'item description')}}</mat-error>
     </mat-form-field>
-    <button type="submit" mat-raised-button color="primary">Add</button>
+    <button type="submit"
+            mat-raised-button
+            color="primary">Edit
+    </button>
   </div>
 
 </form>

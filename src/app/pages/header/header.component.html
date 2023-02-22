@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <a routerLink="items">Items</a>
+    <a routerLink="items" [attr.disabled]="!loginService.checkIfUserLogged()">Items</a>
     <a routerLink="add">Add</a>
     <span class="flex-spacing"></span>
     <a routerLink="logout">Logout</a>
