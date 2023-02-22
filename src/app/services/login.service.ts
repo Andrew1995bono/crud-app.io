@@ -1,5 +1,4 @@
 import {Injectable} from '@angular/core';
-import {Router} from "@angular/router";
 import {USER_LOGIN_DATA} from "../shared/constants/user-login-data/user-login-data";
 
 @Injectable({
@@ -8,10 +7,12 @@ import {USER_LOGIN_DATA} from "../shared/constants/user-login-data/user-login-da
 
 export class LoginService {
 
-  constructor(private router: Router) { }
-
   public checkIfUserLogged(): boolean {
-      return !!localStorage.getItem(USER_LOGIN_DATA)
+    return !!localStorage.getItem(USER_LOGIN_DATA)
+  }
+
+  public deleteLoggedUser(): void {
+    localStorage.removeItem(USER_LOGIN_DATA);
   }
 
 }

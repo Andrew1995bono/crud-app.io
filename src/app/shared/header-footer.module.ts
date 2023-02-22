@@ -21,4 +21,5 @@ import {RouterLink} from "@angular/router";
     FooterComponent
   ]
 })
+
 export class HeaderFooterModule { }

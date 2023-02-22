@@ -1,24 +1,31 @@
-<div class="item-card"
-     *ngFor="let item of localStorage.arr">
-  <mat-card class="example-card">
-    <mat-card-header>
-      <mat-card-title>{{item?.itemName}}</mat-card-title>
-      <mat-card-subtitle>{{item?.itemCategory}}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <p>{{item.itemDescription}}</p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button
-              mat-raised-button
-              color="primary"
-              (click)="redirectToEditItem(item)">Edit
-      </button>
-      <button mat-button
-              mat-raised-button
-              color="warn"
-              (click)="deleteItem(item)">Delete
-      </button>
-    </mat-card-actions>
-  </mat-card>
+<div class="empty"
+     *ngIf="!localStorage.arr.length else items">
+  Currently, there are no items added
 </div>
+
+<ng-template #items>
+  <div class="item-card"
+       *ngFor="let item of localStorage.arr">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>{{item?.itemName}}</mat-card-title>
+        <mat-card-subtitle>{{item?.itemCategory}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{item.itemDescription}}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button
+                mat-raised-button
+                color="primary"
+                (click)="redirectToEditItem(item)">Edit
+        </button>
+        <button mat-button
+                mat-raised-button
+                color="warn"
+                (click)="deleteItem(item)">Delete
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</ng-template>
